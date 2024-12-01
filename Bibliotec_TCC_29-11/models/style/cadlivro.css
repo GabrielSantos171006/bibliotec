@@ -1,0 +1,388 @@
+.icon {
+  margin: 20dvh 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.content{
+  background-color: #2f0a2b;
+  flex: 1;
+}
+
+h1{
+  color: #ffffff;
+  align-self: center;
+  text-align: center;
+}
+  
+.search-bar {
+  display: flex;
+  align-items:flex-start;
+  align-self: left;
+  height: 37px;
+  width: 60%;
+  max-width: 300px;
+}
+
+.pesquisar {
+  width: 300px;
+  height: 37px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin: 0px;
+}
+
+/*.search-btn {
+  width: 38px;
+  height: 37px;
+  padding: 8px;
+  border: none;
+  background-color: #1b0126;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+*/
+
+.barra{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.barra > input[type="text"]{
+  width: 300px;
+  max-width: 300px;
+  font-size: 1rem;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin: 0px;
+
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.barra > input[type="button"]{
+  width: 50px;
+  border: none;
+  background-color: #1b0126;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+
+  flex-shrink: 0;
+  max-width: 50px;
+}
+
+.form-container {
+ /* width: 80%;
+  margin-left: 10%;
+  float: left;
+  background: #4d1147;
+  max-height: 80dvh;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+  background: #4d1147;
+  width: 100%;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-edita-container {
+  width: 80%;
+  margin-left: 10%;
+  float: left;
+  background: #4d1147;
+  max-height: 80dvh;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 3fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  align-items: center;
+  gap: 15px;
+}
+
+.edita-form{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 3fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  align-items: center;
+  gap: 15px;
+  /*grid-template-columns: 1fr 1fr;  Reduzido para manter responsividade 
+  column-gap: 10px;*/
+}
+  
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+  
+.cadastro > input[type="text"],
+.cadastro > input[type="number"],
+.cadastro > input[type="file"],
+.cadastro > textarea,
+.cadastro > select,
+button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+  
+.edita-form > input[type="text"],
+.edita-form > input[type="number"],
+.edita-form > input[type="file"],
+.edita-form > textarea,
+.edita-form > select,
+button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+  
+button {
+  background-color: #1b0126;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  grid-column: 3 / -1;
+}
+
+.form-edita-container {
+  width: 80%;
+  margin-left: 10%;
+  float: left;
+  background: #4d1147;
+  max-height: 150dvh;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container span{
+  grid-column: 2 / -1;
+}
+
+.form-control-edita{
+  grid-column: 3 / -1;
+}
+
+.editar{
+  grid-column: 1 / -1;
+}
+  
+button:hover {
+  background-color: #3a0650;
+}  
+
+/*Responsividade*/
+@media (max-width: 768px) {
+.barra > input[type="text"],
+.barra > input[type="button"] {
+  width: 100%;
+}
+
+.form-container, .form-edita-container {
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+.cadastro, .edita-form {
+  grid-template-columns: 1fr;
+}
+
+.editar{
+  grid-column: 3 / -2;
+}
+
+button {
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+}
+
+
+@media (max-width: 480px) {
+.icon {
+  font-size: 1.2rem; 
+  margin: 5px 0;
+}
+
+.user-icon {
+  width: 20%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 0px;
+  background-color: #4d1147;
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  width: 20%;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0px;
+  & a{
+    .imglogo{
+      width: 50px;
+      height: 50px;
+      margin-right: 0px;
+    }
+  }
+}
+
+.form-container, .form-edita-container {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.cadastro, .edita-form {
+  grid-template-columns: 1fr;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+button {
+  width: 100%;
+
+h1 {
+  font-size: 1.2rem;
+}
+}
+
+.editar{
+  grid-column: 3 / -2;
+}
+
+.barra {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.barra > input[type="text"] {
+  width: 150px; 
+  max-width: none; 
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+.barra > input[type="button"] {
+  width: auto;
+  min-width: 50px; 
+  padding: 8px;
+  border: none;
+  background-color: #1b0126;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-bar {
+  width: 200px;
+  max-width: 100%;
+}
+
+.user-icon {
+  width: 20%;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0dvh 0;
+}
+
+.fa-solid{
+  margin: 0px; 
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 100%;
+  background-color: #4d1147;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.icon {
+  margin: 0dvh 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #2f0a2b;
+}
+
+.content h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #d48ee6;
+  text-align: center;
+  padding: 10px;
+}
+
+}

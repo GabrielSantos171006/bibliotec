@@ -1,0 +1,618 @@
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #4d1147;
+}*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #4d1147;
+}
+
+.book-sec img{
+  padding: 10px;
+  min-width: 10dvh;
+  max-width: 20dvh;
+  min-height: 10dvh;
+  max-height: 20dvh;
+}
+
+.book-sec a{
+  align-items: center;
+  min-width: 10dvh;
+  max-width: 20dvh;
+  min-height: 10dvh;
+  max-height: 20dvh;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  & a{
+    .imglogo{
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+/* DROPBUTTON*/
+
+.dropbutton-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbutton {
+  padding: 8px;
+  font-size: 1rem;
+  background-color: #1b0126;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Mostra o dropdown quando ativado */
+.show {
+  display: block;
+}
+
+.main-container {
+  background-color: #2f0a2b;
+  flex: 1;
+  width: 100%;
+  /*background-color: #2f0a2b;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;*/
+  & .block-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5dvh 0;
+    flex-wrap: nowrap;
+    /*width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;*/
+    padding: 20px;
+    & .block{
+      min-width: 40dvw;
+      max-width: 40%;
+      min-height: 25dvh;
+      height: 50dvh;
+      max-height: 60dvh;
+      border-radius: 20px;
+      background-color: #4d1147;
+      color:#ffffff;
+      text-align: center;
+      padding: 2dvh 2dvh 2dvh 2dvh;
+      margin: 10px; /* Espaço entre as divs */
+      /*width: 45%; 
+      max-width: 100%;
+      min-height: 25dvh;
+      height: auto;
+      border-radius: 20px;
+      background-color: #4d1147;
+      color: #ffffff;
+      text-align: center;
+      padding: 2dvh;
+      margin: 10px;*/
+    }
+    & .block a{
+      color: #ffffff;  
+      margin-top: 10dvh;
+      /*float: bottom;*/
+      text-align: center;
+      align-self: center;
+      font-size: 120%;
+    }
+    & .block p{
+      margin-top: 10dvh;
+      text-align: center;
+      align-self: center;
+      font-size: 200%;
+      /*margin-top: 10px;
+      text-align: center;
+      font-size: 1.5rem;*/
+    }
+    & .box-biblioteca{
+      text-align: center;
+      justify-content: center;
+      & .top{
+        height: 10%;
+      }
+      & .mid{
+        height: 70%;
+        font-size: 40px;
+        padding: 10dvh;
+      }
+      & .mid p{
+        text-align: center;
+        align-self: center;
+        font-size: 120%;
+      }
+      & .bottom{
+        height: 10%;
+      }
+    }
+    & .create-biblioteca{
+      text-align: center;
+      overflow-y:scroll;
+      scrollbar-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 20px 20px 20px;
+      .create-btn{
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      .formulario{
+        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+        align-items: center;
+        align-content: center;
+        gap: 15px; 
+      }
+      .formulario label {
+        font-size: 15px;
+        color: #ffffff;
+        display: block;
+        margin-bottom: 5px;
+      }
+      
+      .formulario input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+      
+      .formulario button {
+        width: 100%;
+        padding: 10px;
+        background-color: #1b0126;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        grid-column: 1 / -1;
+      }
+      
+      .formulario button:hover {
+        background-color: #3a0650;
+      }    
+    }
+  }
+  & h1{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+}
+
+/*Parte do aluno*/
+
+.books-container{
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  float: left;
+  background: #4d1147;
+  max-height: 200dvh;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  & .book-sec{
+    /*display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    min-width: 25dvh;
+    max-width: 100%;
+    min-height: 25dvh;
+    height: 30dvh;
+    max-height: 95dvh;
+    border-radius: 20px;
+    background-color: #1b0126;
+    margin: 10px;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #1b0126;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  form button {
+    width: 100%;
+    height: 8dvh;
+    margin-top: 5dvh;;
+    padding: 10px;
+    background-color: #1b0126;
+    color: #fff;
+    border: 2px solid #3a0650;
+    border-radius: 4px;
+    font-size: 120%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    grid-column: 3 / -2;
+  }
+  form button:hover {
+    background-color: #3a0650;
+  }
+}
+
+.tit-livro{
+  /*width: 10dvw;
+  text-align: center;
+  align-self: center;
+  margin-top: 0px;
+  margin: 0px 0px 0px 0px;
+  height: 10dvh;
+  float: top;
+  padding:0px;
+  color: #ffffff;
+  grid-column: 1 / -1;*/
+  flex: 1;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #ffffff;
+  word-wrap: break-word;
+}
+
+.book-sec img{
+  /*padding: 0px;
+  margin: 15px 15px 15px;
+  min-width: 15dvh;
+  max-width: 20dvh;
+  min-height: 20dvh;
+  max-height: 25dvh;*/
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.book-sec a{
+  align-items: center;
+  min-width: 10dvh;
+  max-width: 20dvh;
+  min-height: 10dvh;
+  max-height: 20dvh;
+}
+
+.main-container p{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-top: 5dvh;
+  margin-bottom: 10dvh;
+  grid-column: 1 / -1;
+ }
+
+footer {
+  background-color: #d48ee6;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+/*.barra > input[type="text"],
+.barra > input[type="button"] {
+  width: 100%;
+}*/
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: #4d1147;
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  width: 20%;
+  font-size: 2rem;
+  font-weight: bold;
+  & a{
+    .imglogo{
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.icon {
+  margin: 00dvh 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #2f0a2b;
+}
+
+.content h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #d48ee6;
+  text-align: center;
+  padding: 10px;
+}
+
+.main-container{
+  width: 100%;
+ /* min-width: 100dvh;*/
+  display: flex;
+  /*flex-wrap: nowrap;*/
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction:row; 
+}
+
+.main-container h1{
+  width: 100%;
+  text-align: center;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction:row; 
+}
+
+/*.block-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5dvh 0;
+  flex-wrap: nowrap;
+}
+
+.main-container .block {
+  min-width: 90%; 
+  max-width: 100%;
+  height: auto;
+}
+
+.books-container {
+  width: 100%;
+  margin-left: 0;
+}
+
+.books-container .book-sec {
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+}*/
+
+.book-sec{
+  flex-direction: column;
+  align-items: center;
+
+}
+.book-sec img {
+ /* max-width: 40%;
+  height: auto;*/
+
+  width: 70%;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.tit-livro{
+  /*width: 200dvh;
+  /*max-width: 120px;*/
+  /*text-align: center;
+  align-self: center;
+  margin-top: 0px;
+  /*margin-bottom: 20dvh;*/
+  /*height: 10dvh;
+  float: top;
+  padding:0px;
+  color: #ffffff;
+  grid-column: 1 / -1;*/
+  text-align: center;
+    font-size: 1.2rem;
+}
+
+.main-container {
+  padding: 10px;
+}
+
+.block-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.block {
+  width: 90%;
+  margin: 15px 0;
+}
+
+.books-container {
+  width: 100%;
+}
+
+.books-container .book-sec {
+  grid-template-columns: 1fr 1fr;
+}
+}
+
+@media (max-width: 480px) {
+header {
+  flex-direction: column; 
+  padding: 10px 20px;
+}
+
+.main-container{
+  min-width: 100%;
+}
+
+/*.books-container .book-sec {
+  grid-template-columns: 1fr; 
+}*/
+
+.book-sec img {
+  width: 80%;
+}
+
+.tit-livro {
+  font-size: 1rem;
+}
+
+.dropbutton {
+  width: 100%; 
+}
+
+header {
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.block-container {
+  flex-direction: column;
+}
+
+.block {
+  width: 100%;
+}
+
+.books-container .book-sec {
+  grid-template-columns: 1fr;
+}
+
+.block p {
+  font-size: 1.2rem;
+}
+}
+
+@media (max-width: 320px) {
+/*header {
+  padding: 10px; 
+}
+
+.main-container .block {
+  min-width: 100%;
+  padding: 10px;
+}*/
+
+.book-sec img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tit-livro {
+  font-size: 0.9rem;
+}
+
+.dropdown-content {
+  min-width: 100%; 
+}
+
+.dropbutton {
+  font-size: 0.8rem; 
+}
+
+.books-container .book-sec {
+  grid-template-columns: 1fr;
+  height: auto;
+}
+
+.create-biblioteca form {
+  grid-template-columns: 1fr; 
+}
+
+header {
+  padding: 10px;
+}
+
+.block-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.block {
+  width: 100%;
+}
+
+.block p {
+  font-size: 1rem;
+}
+}

@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  min-height: 70dvh;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width: 1200px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #2f0a2b;
+}
+
+.form-container{
+  width: 50%;
+  background-color: #dda3e9;
+  border-radius: 4px;
+  padding: 10dvh;
+  align-items: center;
+}
+
+.image-container {
+  background-color: #4d1147;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 20px;
+  align-items: center;
+}
+
+.image-container img{
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  object-fit: contain
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div.log-options {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2d0140;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3a0650;
+  transition: background-color 0.3s;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .form-container,
+  .image-container {
+      width: 100%;
+  }
+
+  /* Garantindo que o formulário não ocupe toda a largura da tela */
+  form {
+      width: 90%;
+      max-width: 400px;
+  }
+
+  /* Ajustando margens para melhorar a aparência no mobile */
+  .image-container, .form-container {
+      margin-bottom: 20px;
+  }
+}

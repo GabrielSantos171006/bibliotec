@@ -1,0 +1,225 @@
+.book-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  width: 100%;
+  border: 2px solid #6A1761;
+  margin-top: 5dvh;
+  padding: 10dvh 4dvh 4dvh 4dvh;
+  height: 90dvh;
+  max-height: 100dvh;
+}
+
+/* Seções destacadas */
+.section {
+  border: 2px solid hidden;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 80dvh;
+}
+
+/* Seção da capa */
+.cover-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #6A1761;
+}
+
+.cover-image {
+  width: 100%;
+  max-width: 250px;
+  height: 300px;
+  background-color: #1b0126;
+  border: 2px solid #6A1761;
+  border-radius: 10px;
+}
+
+.book-info {
+  text-align: center;
+  font-size: 15px;
+  display: grid;
+  gap: 10px;
+  height: 20dvh;
+  max-height: 25dvh;
+  color: #ffffff;
+  border: 2px solid #6A1761;
+}
+
+.book-info p{
+  margin: 0;
+  padding: 0;
+}
+
+/* Seção de sinopse */
+.synopsis-section {
+  font-size: 100%;
+  text-align: center;
+  border: 2px solid #6A1761;
+  overflow-y: scroll;
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+}
+
+.synopsis-section p {
+  text-align: left;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Disponibilidade e inputs */
+.availability {
+  color: #8affa3;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10dvh;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  max-height: 40dvh;
+}
+
+.input-section form {
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 100%;
+  max-height: 40dvh;
+}
+
+.btn-editar{
+  width: 100%;
+  height: 15dvh;
+  text-align: center;
+  text-decoration: none;
+  max-height: 20dvh;
+  padding: 5dvh;
+  border: 1px solid #ffffff;
+  background-color: #1b0126;
+  color: #ffffff;
+  border-radius: 5px;
+  /*transition: background-color 0.3s;*/
+}
+
+.btn-carrinho{
+  width: 100%;
+  height: 15dvh;
+  max-height: 20dvh;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  background-color: #1b0126;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.input-section > form > input[type="button"] {
+  width: 100%;
+  height: 15dvh;
+  max-height: 20dvh;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  background-color: #1b0126;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+
+.input-section > form > input:hover {
+  background-color: #3a0650;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .book-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    height: auto;
+    max-height: none;
+  }
+
+  .cover-image {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .book-info {
+    font-size: 100%;
+  }
+
+  .synopsis-section p {
+    font-size: 110%;
+    text-align: left;
+  }
+
+  .availability {
+    margin-top: 5dvh;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-container {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    margin-top: 3dvh;
+  }
+
+  .cover-image {
+    max-width: 180px;
+    height: auto;
+  }
+
+  .book-info {
+    font-size: 90%;
+  }
+
+  .synopsis-section p {
+    font-size: 100%;
+  }
+
+  .input-section form {
+    font-size: 0.9rem;
+  }
+
+  .input-section > form > input {
+    height: 12dvh;
+  }
+
+  .input-section {
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-container {
+    padding: 10px;
+  }
+
+  .cover-image {
+    max-width: 150px;
+    height: auto;
+  }
+
+  .book-info {
+    font-size: 80%;
+  }
+
+  .synopsis-section p {
+    font-size: 90%;
+  }
+
+  .input-section form {
+    font-size: 0.85rem;
+  }
+
+  .input-section > form > input {
+    height: 10dvh;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+}

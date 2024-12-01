@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.content {
+  padding: 20px;
+  background-color: #2f0a2b;
+  overflow-y: hidden;
+}
+
+.main-container{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4d1147;
+  max-height: 150dvh;
+}
+
+.catalogo{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4d1147;
+  max-height: 150dvh;
+  overflow-y: scroll;
+  scrollbar-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+}
+
+.book{
+  width: 125px;
+  height: 175px;
+  border: 1px solid black;
+  margin: 15px 22px;
+  display: flex;
+}
+
+.book a{
+  width: 125px;
+  height: 175px;
+  max-height: 175px;
+  max-width: 125px
+}
+
+.book img{
+  width: 100%;
+  height: 100%;
+  max-height: 175px;
+  max-width: 125px;
+  display: block;
+}
+
+footer {
+  background-color: #d48ee6;
+  text-align: center;
+  padding: 10px;
+}
+
+/*Parte do adm*/
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4d1147;
+  max-height: 170dvh;
+}
+
+.catalogo{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4d1147;
+  max-height: 170dvh;
+  overflow-y: scroll;
+  scrollbar-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+
+/* Telas menores que 1024px */
+@media (max-width: 1024px) {
+  .catalogo {
+    max-height: 80vh;
+    padding: 5px;
+  }
+
+  .book {
+    width: 110px;
+    height: 160px;
+    margin: 10px;
+  }
+}
+
+/* Telas menores que 768px */
+@media (max-width: 768px) {
+  .content {
+    padding: 10px;
+  }
+
+  .catalogo {
+    max-height: 70vh;
+  }
+
+  .book {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+/* Telas menores que 480px */
+@media (max-width: 480px) {
+  .book {
+    width: 80px;
+    height: 120px;
+    margin: 5px;
+  }
+}
